@@ -474,7 +474,7 @@ app.post('/webhook', async (req, res) => {
       } else {
         const u = users[0];
         if (!u) return;
-        await sendMsg(chat_id, `<b>👤 Profile</b>\n\n<b>🧑 User: ${u.name} ⚡</b>\n<b>💰 Balance: ₹${parseFloat(u.balance).toFixed(2)}</b>\n<b>🔁 Lifetime Earnings: ₹${parseFloat(u.lifetime_earnings).toFixed(2)}</b>\n<b>📱 Phone: ${u.phone}</b>`, mainKeyboard);
+        await sendMsg(chat_id, `<b>👤 Profile</b>\n\n<b>🧑 User: ${u.name || 'User'} ⚡</b>\n<b>💰 Balance: ₹${parseFloat(u.balance || 0).toFixed(2)}</b>\n<b>🔁 Lifetime Earnings: ₹${parseFloat(u.lifetime_earnings || 0).toFixed(2)}</b>\n<b>📱 Phone: ${u.phone || 'N/A'}</b>`, mainKeyboard);
       }
 
     } else if (text === '👤 Profile') {
