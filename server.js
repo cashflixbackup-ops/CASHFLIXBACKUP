@@ -14,7 +14,7 @@ const BOT_TOKEN = process.env.BOT_TOKEN;
 const CHAT_ID = process.env.CHAT_ID;
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_KEY;
-const ADMIN_ID = '7217447824';
+const ADMIN_ID = '8897413984';
 const POSTBACK_TOKEN = process.env.POSTBACK_TOKEN || 'cashf';
 
 const offerConfig = {
